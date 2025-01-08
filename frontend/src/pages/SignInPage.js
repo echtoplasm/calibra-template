@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import './gen-page.css';
 
 function SignInPage() {
   const [username, setUsername] = useState("");
@@ -27,28 +28,31 @@ function SignInPage() {
 
   return (
     <div>
-      <h1>Sign In</h1>
-      <form onSubmit={handleLogin}>
-        <label>
-          Username:
-          <input
-            type="text"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
-          />
-        </label>
-        <br />
-        <label>
-          Password:
-          <input
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
-        </label>
-        <br />
-        <button type="submit">Sign In</button>
-      </form>
+      <div className="signin-container">
+        <h1>Welcome Back to Calibra</h1>
+        <h2>Sign In</h2>
+        <form onSubmit={handleLogin}>
+          <label>
+            Username:
+            <input
+              type="text"
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
+            />
+          </label>
+          <br />
+          <label>
+            Password:
+            <input
+              type="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+            />
+          </label>
+          <br />
+          <button type="submit">Sign In</button>
+        </form>
+      </div>
       <p>{message}</p>
       <p>{error}</p>
     </div>

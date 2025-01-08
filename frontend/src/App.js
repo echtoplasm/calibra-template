@@ -8,14 +8,32 @@ import LandingPage from './landing-page/LandingPage';
 import SignInPage from './pages/SignInPage';
 import AboutPage from './pages/AboutPage';
 import Services from './pages/Services';
+import SignUpPage from './pages/SignUpPage';
 
 function App() {
+  const [user, setUser] = React.useState(null); 
+  const [token, setToken] = React.useState(null); 
+  const [error, setError] = React.useState(null); 
+
+  async function login (user = null) {
+    setUser(user);
+  }
+
+  async function logout () {
+    setUser(null);
+  }
+
+  async function signup (user = null) {
+    setUser(user);
+  }
+ 
   return (
     <Router>
-      <NavBar /> {/* NavBar will be on top of every page */}
-      <Routes> {/* Replace Switch with Routes */}
+      <NavBar />
+      <Routes> 
         <Route path="/" element={<LandingPage />} />
         <Route path="/signin" element={<SignInPage />} />
+        <Route path="/signup" element={<SignUpPage />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/services" element={<Services />} />
       </Routes>
