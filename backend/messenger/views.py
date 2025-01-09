@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from rest_framework import generics
 from .models import Conversation, Message
-from .serializers import ConversationSerializer, MessageSerializer
+from api.serializers import ConversationSerializer, MessageSerializer
 
 # Create your views here.
 

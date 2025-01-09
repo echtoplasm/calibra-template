@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from rest_framework import generics
 from .models import File, FileAccess
-from .serializers import FileSerializer, FileAccessSerializer
+from api.serializers import FileSerializer, FileAccessSerializer
 
 # Create your views here.
 

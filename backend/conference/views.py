@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from rest_framework import generics
 from .models import VideoConference
-from .serializers import ConferenceSerializer
+from api.serializers import ConferenceSerializer
 
 # Create your views here.
 

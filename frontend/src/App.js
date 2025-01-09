@@ -5,40 +5,42 @@ import './App.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'; 
 import NavBar from './components/NavBar'; 
 import LandingPage from './landing-page/LandingPage';
-import SignInPage from './pages/SignInPage';
+import SignInPage from './pages/login';
 import AboutPage from './pages/AboutPage';
 import Services from './pages/Services';
 import SignUpPage from './pages/SignUpPage';
+import TaskDataService from './services/tasks';
 
 function App() {
-  const [user, setUser] = React.useState(null); 
-  const [token, setToken] = React.useState(null); 
+  const [user, setUser] = React.useState(null);
   const [error, setError] = React.useState(null); 
 
   async function login (user = null) {
-    setUser(user);
+    TaskDataService.login(user)
+    .then(Response => {
+      setUser(user.username);
+      localStorage.setItem('user', user.username);
+      setError('');
+  })
+    .catch( e => {
+      console.log('login error', e);
+      setError('e.toString()');
+    });
   }
-
-  async function logout () {
-    setUser(null);
-  }
-
-  async function signup (user = null) {
-    setUser(user);
-  }
- 
   return (
     <Router>
       <NavBar />
       <Routes> 
         <Route path="/" element={<LandingPage />} />
-        <Route path="/signin" element={<SignInPage />} />
+        <Route path="/signin" element={<login />} />
         <Route path="/signup" element={<SignUpPage />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/services" element={<Services />} />
       </Routes>
     </Router>
   );
+
+
 }
 
 export default App;

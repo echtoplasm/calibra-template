@@ -40,7 +40,6 @@ INSTALLED_APPS = [
     #3rd party
     'rest_framework',
     'corsheaders',
-    'rest_framework.authtoken',
     #local
     'accounts.apps.AccountsConfig',
     'conference.apps.ConferenceConfig',
@@ -48,6 +47,7 @@ INSTALLED_APPS = [
     'messenger.apps.MessengerConfig',
     'notifications.apps.NotificationsConfig',
     'tasks.apps.TasksConfig',
+    'api.apps.ApiConfig',
 ]
 
 MIDDLEWARE = [
