@@ -5,10 +5,10 @@ import './App.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'; 
 import NavBar from './components/NavBar'; 
 import LandingPage from './landing-page/LandingPage';
-import SignInPage from './pages/login';
+import Login from './components/login';
 import AboutPage from './pages/AboutPage';
 import Services from './pages/Services';
-import SignUpPage from './pages/SignUpPage';
+import SignUp from './components/signup';
 import TaskDataService from './services/tasks';
 
 function App() {
@@ -32,8 +32,8 @@ function App() {
       <NavBar />
       <Routes> 
         <Route path="/" element={<LandingPage />} />
-        <Route path="/signin" element={<login />} />
-        <Route path="/signup" element={<SignUpPage />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<SignUp />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/services" element={<Services />} />
       </Routes>

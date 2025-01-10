@@ -25,6 +25,15 @@ class TaskSerializer(serializers.ModelSerializer):
         model = Task
         fields = '__all__'
 
+class TaskToggleCompleteSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Task
+        fields = ['id']
+        read_only_fields = ['task_name', 'task_description',
+                            'task_owner', 'task_assigned_to',
+                            'task_due_date', 'task_priority',
+                            'task_status', 'task_comments']
+
 
 # ---- Notification Serializers here ---- #
 class NotificationSerializer(serializers.ModelSerializer):

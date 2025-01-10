@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     #3rd party
     'rest_framework',
     'corsheaders',
+    'rest_framework.authtoken',
     #local
     'accounts.apps.AccountsConfig',
     'conference.apps.ConferenceConfig',
@@ -145,10 +146,7 @@ AUTH_USER_MODEL = 'accounts.CustomUser'
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES' : (
         'rest_framework.authentication.TokenAuthentication',
-    ),
-    'DEFAULT_PERMISSION_CLASSES' : (
-        'rest_framework.permissions.IsAuthenticated',
-    ),
+    )
 }
 
 # CORS

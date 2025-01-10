@@ -1,6 +1,6 @@
 from django.urls import path
 
-from tasks.views import TaskListCreate, TaskDetail
+from tasks.views import TaskListCreate, TaskDetail, TaskToggleComplete
 
 from notifications.views import NotificationList, NotificationDetail
 
@@ -12,12 +12,15 @@ from fileshare.views import FileList, FileDetail, FileAccessList, FileAccessDeta
 
 from texttosql.views import text_to_sql
 
+from . import views
+
 
 urlpatterns = [
 
     #tasks urls#
     path('tasks/', TaskListCreate.as_view()),
     path('tasks/<int:pk>/', TaskDetail.as_view()),
+    path('tasks/<int:pk>/complete/', TaskToggleComplete.as_view()),
     
 
     #notifications urls#
@@ -42,6 +45,10 @@ urlpatterns = [
 
     #texttosql urls#
     path('v1/texttosql/convert/', text_to_sql, name='text-to-sql'),
+
+    #auth urls#
+    path('signup/', views.signup, name='signup'),
+    path('login/', views.login, name='login'),
 
 ]
 
