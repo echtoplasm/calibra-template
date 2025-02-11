@@ -9,6 +9,7 @@ import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import LandingPage from './landing-page/LandingPage';
 import AboutPage from './pages/AboutPage';
 import Services from './pages/Services';
+import AssignmentLinks from './components/assignments';
 
 /* components imports */
 import NavBar from './components/NavBar'; 
@@ -44,6 +45,8 @@ function App() {
             <Route path="/about" element={<AboutPage />} />
 
             <Route path="/services" element={<Services />} />
+
+            <Route path='/assignments' element={<AssignmentLinks/>} />
 
           </Routes>
         </Router>

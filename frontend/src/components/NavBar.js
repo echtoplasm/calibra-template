@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './NavBar.css';
 import calibraNavBar from '../branding/logo_white_no_background.png';
+import AssignmentLinks from './assignments';
 
 
 
@@ -21,6 +22,9 @@ const NavBar = () => {
           </li>
           <li className="navbar-item">
             <Link to="/services" className="navbar-link">Services</Link>
+          </li>
+          <li className="navbar-item">
+            <Link to="/assignments" className='navbar-link'>Web182</Link>
           </li>
         </ul>
       </div>
