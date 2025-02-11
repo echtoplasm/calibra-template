@@ -6,6 +6,8 @@ const AboutPage = () => {
     <div className="about-container">
       <section>
         <h1>About Calibra</h1>
+        <p id='disclaim'>This is a template I made for a personal project, and I have decided to use the same template for an assignment for school, So if you are seeing this that is what this is.</p>
+        <p>This template was built on a DRF API, a postgres database, and using React for the frontend.</p>
         <p>Calibra is an all-in-one AI integrated content management and conferencing platform that helps you strwamline the workflow of your business. From managing your data, generating SQL queries, writing reports and so much more.</p>
       </section>
 

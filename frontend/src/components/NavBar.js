@@ -22,18 +22,6 @@ const NavBar = () => {
           <li className="navbar-item">
             <Link to="/services" className="navbar-link">Services</Link>
           </li>
-          <li className="navbar-item">
-            <Link to="/login" className="navbar-link">Log In</Link>
-          </li>
-          <li className="navbar-item">
-            <Link to="/signup" className="navbar-link">Sign Up</Link>
-          </li>
-          <li className="navbar-item">
-            <Link to="/tasks" className="navbar-link">Add Tasks</Link>
-          </li>
-          <li className="navbar-item">
-            <Link to="/tasks-list" className="navbar-link">TaskList</Link>
-          </li>
         </ul>
       </div>
     </nav>
