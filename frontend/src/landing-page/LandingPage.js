@@ -8,9 +8,9 @@ const LandingPage = () => {
   return (
     <div>
       <header className="landing-container">
-        <h1>Welcome to Calibra</h1>
+        <h1>Welcome to EchoSec</h1>
         <img src={calibraLogo} alt="Calibra Logo." width="320" height="320" />
-        <p>Your all-in-one AI integrated conferencing platform</p>
+        <p>Next level cybersecurity and pentesting</p>
       </header>
 
       <section className="features">
