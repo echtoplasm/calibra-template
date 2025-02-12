@@ -1,2 +1,2 @@
-web: gunicorn calibra-web182
+web: gunicorn backend.wsgi
 
